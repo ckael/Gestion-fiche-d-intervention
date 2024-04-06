@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="80" pageHeight="127" columnWidth="70" leftMargin="5" rightMargin="5" topMargin="10" bottomMargin="10" uuid="3bf9182d-1c7e-4958-b0c4-5d7a15419053">
+	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Nom" class="java.lang.String"/>
+	<parameter name="Direction" class="java.lang.String"/>
+	<parameter name="Porte" class="java.lang.String"/>
+	<parameter name="Numerofiche" class="java.lang.String"/>
+	<parameter name="IdMateriel" class="java.lang.String"/>
+	<parameter name="Type" class="java.lang.String"/>
+	<parameter name="NumSerie" class="java.lang.String"/>
+	<parameter name="Prenom" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="7" width="70" height="10" uuid="748c2ea1-b936-4c57-9ff0-375e3e7bb787"/>
+				<textElement textAlignment="Center">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ticket de récuperation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="35" height="7" uuid="4d10c5c9-6022-4587-a87f-069b106d685f"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Fiche Numéro :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="13" height="7" uuid="a7d0dc20-5a75-4d69-9919-a8faed42bd59"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Nom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="46" width="23" height="6" uuid="e2427fcb-45cb-4ff3-beb8-241b50e65822"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Diréction:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="34" height="6" uuid="f0ca21db-fe7c-4fc1-a7ed-4d288fcd734a"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Porte Numero:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="34" height="8" uuid="3a087d2a-5fdf-48fd-b24f-c50f3211db2d"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[ID du matériel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="35" height="6" uuid="092ac291-d248-4847-ad0f-6acfff21341f"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Type du matériel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="88" width="35" height="6" uuid="6bd994fe-975e-4d52-b1a8-d0e0bcf2d72d"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Numero de serie:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="23" y="89" width="35" height="0" uuid="7fd8748f-ce69-4456-94ff-51a26e227a87"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="35" y="97" width="35" height="6" uuid="6a2bc8e4-574e-45bd-9ed7-493ed5632ec7"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="14" y="30" width="55" height="7" uuid="e8127ebf-babd-462c-bdce-21723c20f79d"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="46" width="45" height="6" uuid="24190b65-a2b2-4f61-b693-048b4a93a7fa"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Direction}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="55" width="35" height="6" uuid="e01952d3-d224-4192-bd0b-5b7088f18f6e"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Porte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="21" width="36" height="7" uuid="f53253a8-a354-4e03-b804-ad078e85faf0"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Numerofiche}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="65" width="32" height="8" uuid="1b61c3e7-28e1-4a8d-a95d-4fa5f8b314dd"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IdMateriel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="76" width="30" height="6" uuid="9b52594e-8754-4501-897e-c9dc124f4529"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="37" y="88" width="32" height="6" uuid="93dfd8c9-6893-4f94-ab9c-6037a58d448d"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NumSerie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="38" width="23" height="7" uuid="64fffb66-15ba-4556-af4f-81a9732ef6a7"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<text><![CDATA[Prenom:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="23" y="38" width="46" height="7" uuid="88b5a00a-521a-4652-8282-f744d7d827b9"/>
+				<textElement>
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Prenom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

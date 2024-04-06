@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="709.0" style="-fx-border-radius: 20%;" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.FXMLDocumentController">
+    <children>
+      <Label layoutX="449.0" layoutY="124.0" prefHeight="41.0" prefWidth="168.0" text="GESTION PERSONEL" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tPersonel" layoutX="16.0" layoutY="181.0" prefHeight="283.0" prefWidth="329.0">
+        <columns>
+          <TableColumn fx:id="cMatricule" prefWidth="84.0" resizable="false" text="Matricule" visible="false" />
+          <TableColumn fx:id="cNom" prefWidth="109.0" resizable="false" text="Nom" />
+            <TableColumn fx:id="cPrenom" prefWidth="109.0" resizable="false" text="Prenom" />
+            <TableColumn fx:id="cTelephone" prefWidth="109.0" text="Telephone" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </TableView>
+      <TextField fx:id="sMatricule" disable="true" layoutX="486.0" layoutY="199.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+      <HBox layoutX="428.0" layoutY="371.0" />
+      <TextField fx:id="sNom" layoutX="486.0" layoutY="199.0" />
+      <TextField fx:id="sPrenom" layoutX="488.0" layoutY="269.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="sTelephone" layoutX="486.0" layoutY="339.0" />
+      <TextField fx:id="sSearch" layoutX="36.0" layoutY="132.0" prefHeight="25.0" prefWidth="188.0" promptText="Nom du personel a rechercher" />
+      <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="245.0" layoutY="152.0" onMouseClicked="#Chercher" size="20" />
+      <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="306.0" layoutY="152.0" onMouseClicked="#Actualiser" size="20" />
+      <HBox fx:id="bSuprimer" disable="true" layoutX="590.0" layoutY="427.0" onMouseClicked="#Suprimer" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+         <children>
+            <Label prefHeight="20.0" prefWidth="70.0" text="Suprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" wrappingWidth="17.14285659790039" />
+         </children>
+      </HBox>
+      <HBox fx:id="bModifier" disable="true" layoutX="374.0" layoutY="427.0" onMouseClicked="#Modifier" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+         <children>
+            <Label prefHeight="29.0" prefWidth="72.0" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" wrappingWidth="17.14285659790039" />
+         </children>
+      </HBox>
+      <HBox fx:id="bAjouter" layoutX="483.0" layoutY="427.0" onMouseClicked="#Ajouter" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+         <children>
+            <Label prefHeight="25.0" prefWidth="80.0" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" wrappingWidth="17.14285659790039" />
+         </children>
+      </HBox>
+      <Label layoutX="432.0" layoutY="203.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="273.0" text="Prenom" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="428.0" layoutY="343.0" text="Numero" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="53.0" text="Liste des personels" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Separator layoutX="355.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="566.0" prefWidth="6.0" />
+    </children>
+</AnchorPane>

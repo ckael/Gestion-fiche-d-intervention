@@ -1,0 +1,83 @@
+.btnMenu:hover
+{
+	-fx-background-color:#4D4D4D;
+	transition: 1s;
+
+}
+.btnAll
+{
+
+	-fx-background-color:#202020;
+        -fx-border-color: silver;
+        -fx-padding: 5 ;
+         -fx-effect: dropshadow( one-pass-box , black , 20 , 0.0 , 2 , 0 );
+	
+
+}
+.btnAll:hover
+{
+	
+	
+           -fx-effect: dropshadow( one-pass-box , whitesmoke , 8 , 0.0 , 2 , 0 );
+}
+.pane 
+{
+    -fx-background-color: #202020;
+}
+
+.btn-success {
+  
+  -fx-background-color: #198754;
+  -fx-border-color: #198754;
+}
+.btn-success:hover {
+ 
+  -fx-background-color: #157347;
+  -fx-border-color: #146c43;
+  -fx-border-radius: 3px;
+}
+
+.btn-warning {
+  
+  -fx-background-color: #ffc107;
+  -fx-border-color: #ffc107;
+
+}
+.btn-warning:hover {
+  
+  -fx-background-color: #ffca2c;
+  -fx-border-color: #ffc720;
+}
+
+
+.btn-danger {
+  
+  -fx-background-color: #dc3545;
+  -fx-border-color: #dc3545;
+}
+.btn-danger:hover {
+ 
+  -fx-background-color: #bb2d3b;
+  -fx-border-color: #b02a37;
+  
+}
+
+.btn-outline-success {
+  -fx-fill: #198754;
+  -fx-border-color: #198754;
+  -fx-background-color: none;
+}
+.btn-outline-success:hover {
+  -fx-fill: #fff;
+  -fx-background-color: #198754;
+  -fx-border-color: #198754;
+  
+}
+.sLogin
+{
+
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: none;
+    
+ 
+}

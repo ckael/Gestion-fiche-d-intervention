@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="566.0" maxWidth="709.0" minHeight="566.0" minWidth="709.0" prefHeight="566.0" prefWidth="709.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.MaterielController">
+   <children>
+      <Pane fx:id="pEcran" layoutX="2.0" layoutY="1.0" prefHeight="566.0" prefWidth="709.0" styleClass="pane" visible="false">
+         <children>
+            <TextField fx:id="sIdEcran" layoutX="505.0" layoutY="225.0" prefHeight="25.0" prefWidth="156.0" />
+            <TextField fx:id="sMarque" layoutX="505.0" layoutY="300.0" prefHeight="25.0" prefWidth="156.0" />
+            <TextField fx:id="sDimension" layoutX="502.0" layoutY="366.0" prefHeight="25.0" prefWidth="156.0" />
+            <Label layoutX="403.0" layoutY="229.0" prefHeight="17.0" prefWidth="87.0" text="Identification" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="304.0" prefHeight="17.0" prefWidth="69.0" text="Marque" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="370.0" prefHeight="17.0" prefWidth="69.0" text="Dimension" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tEcran" layoutX="14.0" layoutY="222.0" prefHeight="254.0" prefWidth="355.0">
+              <columns>
+                <TableColumn fx:id="cId" prefWidth="100.0" text="Identification" />
+                <TableColumn fx:id="cMarque" prefWidth="122.0" text="Marque" />
+                  <TableColumn fx:id="cDimension" prefWidth="131.0" text="Dimension" />
+              </columns>
+            </TableView>
+            <TextField fx:id="sSearch" layoutX="36.0" layoutY="183.0" prefHeight="25.0" prefWidth="204.0" promptText="L'identification de l'ecran a chercher" />
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="258.0" layoutY="204.0" onMouseClicked="#RechercheEcran" size="20" />
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="305.0" layoutY="204.0" onMouseClicked="#ActualiserEcran" size="20" />
+            <Separator layoutX="378.0" orientation="VERTICAL" prefHeight="566.0" prefWidth="12.0" />
+            <HBox fx:id="bEnregistrer" layoutX="497.0" layoutY="452.0" onMouseClicked="#EnregistrerEcran" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="68.0" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" text="" />
+               </children>
+            </HBox>
+            <HBox fx:id="bModifier" disable="true" layoutX="391.0" layoutY="452.0" onMouseClicked="#ModifierEcran" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="58.0" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="bSuprimer" disable="true" layoutX="604.0" layoutY="452.0" onMouseClicked="#SuprimerEcran" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="58.0" text="Archiver" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="20" />
+               </children>
+            </HBox>
+            <Label layoutX="96.0" layoutY="82.0" text="Liste des ecrans" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pUnitéCentrale" layoutX="-1.0" layoutY="-1.0" prefHeight="566.0" prefWidth="709.0" styleClass="pane">
+         <children>
+            <TableView fx:id="tUC" layoutX="14.0" layoutY="185.0" prefHeight="262.0" prefWidth="373.0">
+              <columns>
+                <TableColumn fx:id="cIdUc" prefWidth="95.0" text="Identification" />
+                <TableColumn fx:id="cCpu" text="Processeur" />
+                  <TableColumn fx:id="cRAM" prefWidth="87.0" text="RAM" />
+                  <TableColumn fx:id="cDisqueDur" prefWidth="110.0" text="Disque Dur" />
+              </columns>
+            </TableView>
+            <TextField fx:id="sSearchUc" layoutX="14.0" layoutY="148.0" prefHeight="17.0" prefWidth="233.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="295.0" layoutY="167.0" onMouseClicked="#RechercheUc" size="20">
+               
+                  <LinearGradient cycleMethod="REFLECT" endX="0.9146919431279621" endY="1.0" startX="0.8199052132701421">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3421255648136139" green="0.2579191029071808" blue="0.7631579041481018" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </FontAwesomeIconView>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="348.0" layoutY="167.0" onMouseClicked="#ActualiserUc" size="20" />
+            <TextField fx:id="sCpu" layoutX="531.0" layoutY="242.0" />
+            <TextField fx:id="sIdUc" layoutX="531.0" layoutY="185.0" />
+            <TextField fx:id="SDur" layoutX="531.0" layoutY="350.0" />
+            <TextField fx:id="SRam" layoutX="531.0" layoutY="297.0" />
+            <Label layoutX="433.0" layoutY="189.0" prefHeight="17.0" prefWidth="78.0" text="Identification" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="354.0" prefHeight="17.0" prefWidth="78.0" text="Disque Dur" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="301.0" prefHeight="17.0" prefWidth="78.0" text="RAM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="433.0" layoutY="247.0" prefHeight="17.0" prefWidth="78.0" text="Processeur" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="392.0" orientation="VERTICAL" prefHeight="566.0" prefWidth="12.0" />
+            <HBox fx:id="bEnregisterUc" layoutX="506.0" layoutY="495.0" onMouseClicked="#EnregistrerUc" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="68.0" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" text="" />
+               </children>
+            </HBox>
+            <HBox fx:id="bModifierUc" disable="true" layoutX="404.0" layoutY="447.0" onMouseClicked="#ModifierUc" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label fx:id="bModifer1" prefHeight="25.0" prefWidth="58.0" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="bArchiverUc" disable="true" layoutX="605.0" layoutY="447.0" onMouseClicked="#ArchiverUc" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="58.0" text="Archiver" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="20" />
+               </children>
+            </HBox>
+            <Label layoutX="102.0" layoutY="80.0" text="Liste des ordinateurs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pAure" layoutX="-4.0" layoutY="-4.0" prefHeight="566.0" prefWidth="709.0" styleClass="pane" visible="false">
+         <children>
+            <Separator layoutX="289.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="566.0" prefWidth="4.0" />
+            <TextField fx:id="sIdAutre" layoutX="464.0" layoutY="246.0" />
+            <TextField fx:id="sDesignation" layoutX="464.0" layoutY="328.0" />
+            <Label layoutX="363.0" layoutY="250.0" prefHeight="17.0" prefWidth="78.0" text="Identification" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="332.0" prefHeight="17.0" prefWidth="69.0" text="Designation" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tAutre" layoutX="14.0" layoutY="223.0" prefHeight="243.0" prefWidth="259.0">
+               <columns>
+                  <TableColumn fx:id="cIdAutre" prefWidth="133.0" text="Identification" />
+                  <TableColumn fx:id="cDesignationAutre" prefWidth="125.0" text="Designation" />
+               </columns>
+            </TableView>
+            <TextField fx:id="sSearchAutre" layoutX="14.0" layoutY="180.0" prefHeight="25.0" prefWidth="166.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="206.0" layoutY="199.0" onMouseClicked="#SearchAutre" size="20" />
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" layoutX="248.0" layoutY="199.0" onMouseClicked="#RefreshAutre" size="20" />
+            <HBox fx:id="bEnregistrerAutre" layoutX="447.0" layoutY="412.0" onMouseClicked="#EnregistrerAutre" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="68.0" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" text="" />
+               </children>
+            </HBox>
+            <HBox fx:id="bModifierAutre" disable="true" layoutX="331.0" layoutY="412.0" onMouseClicked="#ModifierAutre" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label fx:id="bModifer" prefHeight="25.0" prefWidth="58.0" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="bArchiverAutre" disable="true" layoutX="563.0" layoutY="412.0" onMouseClicked="#ArchiverAutre" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="58.0" text="Archiver" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="20" />
+               </children>
+            </HBox>
+            <Label layoutX="27.0" layoutY="95.0" text="Liste des autres materiels" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="466.0" layoutY="81.0" text="Type" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cType" layoutX="510.0" layoutY="77.0" onAction="#ChoixType" prefHeight="25.0" prefWidth="156.0" promptText="Type " style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

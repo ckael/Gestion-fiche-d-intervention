@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="870.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.MenuGeneralController">
+   <left>
+      <Pane fx:id="pLeft" prefHeight="374.0" prefWidth="161.0" style="-fx-background-color: #202020;" stylesheets="@../Css/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="bHome" layoutY="1.0" onMouseClicked="#Home" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="63.0" layoutY="42.0" text="HOME" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOME" layoutX="73.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bPersonel" layoutY="71.0" onMouseClicked="#Personel" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="51.0" layoutY="47.0" text="PERSONNEL" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USERS" layoutX="70.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bReparateur" layoutY="141.0" onMouseClicked="#Reparateur" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="42.0" layoutY="49.0" text="REPARATEUR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="74.0" layoutY="33.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bService" layoutY="211.0" onMouseClicked="#Service" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="61.0" layoutY="43.0" text="SERVICE" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SUITCASE" layoutX="75.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bPorte" layoutY="282.0" onMouseClicked="#Porte" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="62.0" layoutY="41.0" text="PORTE" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MAP_MARKER" layoutX="75.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bDemande" layoutY="353.0" onMouseClicked="#Demande" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="51.0" layoutY="40.0" text="DEMANDE" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PASTE" layoutX="72.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bRecuperation" layoutY="424.0" onMouseClicked="#Recuperation" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="36.0" layoutY="40.0" text="RECUPERATION" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COGS" layoutX="71.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+            <Pane fx:id="bArchive" layoutY="495.0" onMouseClicked="#Materiel" prefHeight="71.0" prefWidth="161.0" style="-fx-border-color: White;" styleClass="btnMenu">
+               <children>
+                  <Label layoutX="51.0" layoutY="36.0" text="MATERIEL" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LAPTOP" layoutX="70.0" layoutY="29.0" size="18" />
+               </children>
+            </Pane>
+         
+         </children>
+      </Pane>
+   </left>
+   <top>
+      <Pane prefHeight="29.0" prefWidth="384.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="bHideMenu" layoutX="56.0" layoutY="5.0" onMouseClicked="#HideMenu" prefHeight="21.0" prefWidth="76.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" layoutX="50.0" layoutY="17.0" size="20" />
+                  <Label layoutY="2.1428565979003906" text="Menu" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <FontAwesomeIconView fx:id="bClose" fill="#e81123" glyphName="CLOSE" layoutX="847.0" layoutY="21.0" onMouseClicked="#Close" size="20" />
+            <Pane fx:id="bMenu" layoutX="56.0" layoutY="5.0" onMouseClicked="#ShowMenu" prefHeight="21.0" prefWidth="76.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" layoutX="50.0" layoutY="17.0" size="20" />
+                  <Label layoutY="2.1428565979003906" text="Menu" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane fx:id="Main" prefHeight="566.0" prefWidth="709.0" style="-fx-background-color: #202020;" styleClass="Pane" stylesheets="@../Css/Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="186.0" layoutY="72.0" prefHeight="201.0" prefWidth="306.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fitHeight="169.0" fitWidth="294.0" layoutX="12.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../IMG/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="bStatistique" layoutX="249.0" layoutY="329.0" onMouseClicked="#Statistique" prefHeight="55.0" prefWidth="181.0" styleClass="btnAll">
+               <children>
+                  <Label layoutX="38.0" layoutY="14.0" prefHeight="27.0" prefWidth="102.0" text="Statistique" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#0cdd52" glyphName="LINE_CHART" layoutX="138.0" layoutY="38.0" size="30" />
+               </children>
+            </Pane>
+            <Pane fx:id="bListeArchive" layoutX="179.0" layoutY="445.0" onMouseClicked="#ListeArchive" prefHeight="55.0" prefWidth="321.0" styleClass="btnAll">
+               <children>
+                  <Label layoutX="13.0" layoutY="14.0" prefHeight="27.0" prefWidth="254.0" text="Archive des anciennes fiches" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="#0cdd52" glyphName="ARCHIVE" layoutX="281.0" layoutY="38.0" size="30" />
+               </children>
+            </Pane>
+         </children></Pane>
+   </center>
+</BorderPane>

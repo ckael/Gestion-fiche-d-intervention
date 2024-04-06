@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.4668820678513732" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="709.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ReparateurController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="31.0">
+         <children>
+            <TableView fx:id="tReparateur" layoutX="21.0" layoutY="213.0" prefHeight="216.0" prefWidth="286.0">
+              <columns>
+                <TableColumn fx:id="cNom" editable="false" prefWidth="147.0" text="Nom" />
+                <TableColumn fx:id="cPrenom" editable="false" prefWidth="137.0" text="Prenom" />
+                  <TableColumn fx:id="cMatricule" prefWidth="75.0" text="Column X" visible="false" />
+              </columns>
+            </TableView>
+            <TextField fx:id="sRecherche" layoutX="35.0" layoutY="178.0" prefHeight="25.0" prefWidth="177.0" promptText="Nom du reparateur a chercher" />
+            <FontAwesomeIconView fx:id="bActualiser" fill="WHITE" glyphName="REFRESH" layoutX="266.0" layoutY="197.0" onMouseClicked="#Actualiser" size="20" />
+            <FontAwesomeIconView fx:id="bRecherche" fill="WHITE" glyphName="SEARCH" layoutX="222.0" layoutY="197.0" onMouseClicked="#Rechercher" size="20" />
+            <Label layoutX="64.0" layoutY="104.0" text="Liste des reparateurs " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="356.0">
+         <children>
+            <TextField fx:id="sNom" layoutX="148.0" layoutY="236.0" prefHeight="25.0" prefWidth="140.0" />
+            <TextField fx:id="sPrenom" layoutX="148.0" layoutY="303.0" prefHeight="25.0" prefWidth="140.0" />
+            <Label layoutX="93.0" layoutY="240.0" text="Nom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="86.0" layoutY="307.0" text="Prenom" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lTitre" layoutX="83.0" layoutY="155.0" text="GESTION DE REPARATEUR" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="19.0" />
+               </font>
+            </Label>
+            <HBox fx:id="bEnregistrer" layoutX="138.0" layoutY="385.0" onMouseClicked="#Enregistrer" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="68.0" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="20" text="" />
+               </children>
+            </HBox>
+            <HBox fx:id="bModifier" layoutX="31.0" layoutY="385.0" onMouseClicked="#Modifier" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label fx:id="bModifer" prefHeight="25.0" prefWidth="58.0" text="Modifier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="bSuprimer" layoutX="247.0" layoutY="385.0" onMouseClicked="#Suprimer" prefHeight="32.0" prefWidth="99.0" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="58.0" text="Suprimer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
+               </children>
+            </HBox>
+            <TextField fx:id="sMatricule" layoutX="113.0" layoutY="190.0" visible="false" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

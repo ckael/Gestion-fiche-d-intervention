@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="709.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.DepotController">
+   <children>
+      <ComboBox fx:id="sMatricule" layoutX="151.0" layoutY="93.0" onAction="#ChoixPersonel" prefWidth="150.0" />
+      <TextField fx:id="sNom" editable="false" layoutX="152.0" layoutY="173.0" />
+      <TextField fx:id="sPrenom" editable="false" layoutX="152.0" layoutY="245.0" />
+      <TextField fx:id="sService" editable="false" layoutX="158.0" layoutY="388.0" />
+      <ComboBox fx:id="sPorte" layoutX="157.0" layoutY="315.0" onAction="#ChoixPorte" prefWidth="150.0" />
+      <RadioButton fx:id="rUniteCentrale" layoutX="394.0" layoutY="93.0" mnemonicParsing="false" onAction="#ChoixType" text="Unité Centrale" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="Mat" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rEcran" layoutX="506.0" layoutY="93.0" mnemonicParsing="false" onAction="#ChoixType" prefHeight="17.0" prefWidth="73.0" text="Ecran" textFill="WHITE" toggleGroup="$Mat">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="rAutre" layoutX="579.0" layoutY="93.0" mnemonicParsing="false" onAction="#ChoixType" prefHeight="17.0" prefWidth="65.0" text="Autre" textFill="WHITE" toggleGroup="$Mat">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></RadioButton>
+      <Separator layoutX="350.0" layoutY="70.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="9.0" />
+      <Label layoutX="78.0" layoutY="97.0" text="Matricule" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="177.0" text="Nom" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="249.0" text="Prenom" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="319.0" text="N° Porte" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="392.0" text="Service" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutX="-2.0" layoutY="470.0" prefHeight="4.0" prefWidth="709.0" />
+      <Pane fx:id="bValider" layoutX="264.0" layoutY="484.0" onMouseClicked="#Valider" prefHeight="55.0" prefWidth="181.0" styleClass="btnAll">
+         <children>
+            <Label layoutX="38.0" layoutY="14.0" prefHeight="27.0" prefWidth="83.0" text="VALIDER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#0cdd52" glyphName="CHECK" layoutX="138.0" layoutY="38.0" size="30" />
+         </children>
+      </Pane>
+      <ComboBox fx:id="CmbIdentification" layoutX="493.0" layoutY="127.0" onAction="#IDENTIFICATION" prefWidth="150.0" />
+      <Label fx:id="lPtes" contentDisplay="CENTER" layoutX="390.0" layoutY="232.0" prefHeight="190.0" prefWidth="284.0" text="Les proprietes de la materiel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lType" layoutX="436.0" layoutY="169.0" prefHeight="32.0" prefWidth="192.0" text="Type de materiel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="131.0" text="Identification" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="254.0" layoutY="20.0" text="DEPOT DE MATERIEL" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

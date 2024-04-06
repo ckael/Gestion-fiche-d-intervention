@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="pMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="709.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ChartController">
+   <top>
+      <Pane prefHeight="51.0" prefWidth="709.0" style="-fx-border-color: none;" styleClass="btnAll" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="PieChartB" layoutX="142.0" layoutY="10.0" onMouseClicked="#ChachgePiechart" prefHeight="32.0" prefWidth="98.0" style="-fx-border-color: none;" styleClass="btnAll">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="65.0" text="Pie Chart" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PIE_CHART" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="LineChart" layoutX="308.0" layoutY="10.0" onMouseClicked="#ChachgeLineChart" prefHeight="32.0" prefWidth="94.0" style="-fx-border-color: none;" styleClass="btnAll">
+               <children>
+                  <Label fx:id="bModifer11" prefHeight="20.0" prefWidth="131.0" text="Line Chart" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" size="20" />
+               </children>
+            </HBox>
+            <HBox fx:id="BarChart" layoutX="476.0" layoutY="10.0" onMouseClicked="#ChachgeBarChart" prefHeight="32.0" prefWidth="93.0" style="-fx-border-color: none;" styleClass="btnAll">
+               <children>
+                  <Label fx:id="bModifer12" prefHeight="20.0" prefWidth="58.0" text="Bar Chart" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BAR_CHART" size="20" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane fx:id="pPie" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <PieChart fx:id="PieChart" layoutX="39.0" layoutY="14.0" prefHeight="502.0" prefWidth="637.0" titleSide="BOTTOM" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

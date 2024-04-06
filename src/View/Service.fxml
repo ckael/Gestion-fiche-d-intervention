@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.37623762376237624" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="709.0" styleClass="pane" stylesheets="@../Css/Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controler.ServiceController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="177.0">
+         <children>
+            <TableView fx:id="TService" layoutX="14.0" layoutY="189.0" prefHeight="214.0" prefWidth="237.0">
+              <columns>
+                <TableColumn fx:id="cService" prefWidth="273.0" text="Liste des services" />
+                  <TableColumn fx:id="cCode" prefWidth="75.0" text="cCode" visible="false" />
+              </columns>
+            </TableView>
+            <TextField fx:id="sSearch" layoutX="21.0" layoutY="155.0" prefHeight="25.0" prefWidth="176.0" promptText="Code du service a rechercher" />
+            <FontAwesomeIconView fx:id="bSearch" fill="WHITE" glyphName="SEARCH" layoutX="203.0" layoutY="172.0" onMouseClicked="#Chercher" size="15" />
+            <FontAwesomeIconView fx:id="bRefresh" fill="WHITE" glyphName="REFRESH" layoutX="229.0" layoutY="173.0" onMouseClicked="#Actualiser" size="15" />
+            <Label layoutX="51.0" layoutY="75.0" text="Liste des services " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="519.0">
+         <children>
+            <TextField fx:id="sCodeService" layoutX="193.0" layoutY="241.0" />
+            <TextField fx:id="sService" layoutX="193.0" layoutY="302.0" />
+            <Label layoutX="104.0" layoutY="245.0" text="Code Service" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="135.0" layoutY="306.0" text="Service" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="BEnregistrer" layoutX="179.0" layoutY="378.0" mnemonicParsing="false" onAction="#Enregistrer" prefHeight="29.0" prefWidth="103.0" styleClass="btnAll" text="Enregistrer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="LTitre" layoutX="129.0" layoutY="157.0" prefHeight="29.0" prefWidth="204.0" text="Gestion de Service" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="BModifier" layoutX="298.0" layoutY="378.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="29.0" prefWidth="103.0" styleClass="btnAll" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="BSuprimer" layoutX="60.0" layoutY="378.0" mnemonicParsing="false" onAction="#Suprimer" prefHeight="29.0" prefWidth="103.0" styleClass="btnAll" text="Suprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
